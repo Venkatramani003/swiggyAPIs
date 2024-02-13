@@ -20,6 +20,7 @@ async function connectToDb(){
         console.log(`Error connecting to the database: ${error}`)
     }
 }
+//Connection to db
 connectToDb()
 // Sign-up
 app.post('/sign-up',async (req,res)=>{

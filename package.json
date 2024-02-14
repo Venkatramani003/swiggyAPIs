@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start":"node server.cjs",  //node server.cjs for git hub
+    "start":"node server.cjs",  
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],

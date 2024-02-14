@@ -17,6 +17,9 @@ const ResSchema = new mongoose.Schema({
     },
     nonVeg : {
         type:Array
+    },
+    imgLink : {
+        type : String
     }
 },{versionKey:false})
 const ResDB = mongoose.model( 'Restaurant',ResSchema) 

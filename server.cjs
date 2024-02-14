@@ -63,6 +63,7 @@ app.post('/newRes',async (req,res)=>{
     try{
         await ResDB.create({
             Name:req.body.name,
+            imgLink:req.body.imageLink,
             Rating:req.body.rating,
             location:req.body.location,
             veg:req.body.veg,

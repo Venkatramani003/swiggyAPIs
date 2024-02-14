@@ -15,11 +15,11 @@ const ResSchema = new mongoose.Schema({
         type:String,
         require:true
     },
-    veg :{
-        type:Array
+    Dish :{
+        type:String
 
     },
-    nonVeg : {
+    DishName :{
         type:String
     },
     imgLink : {

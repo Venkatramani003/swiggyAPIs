@@ -66,8 +66,9 @@ app.post('/newRes',async (req,res)=>{
             imgLink:req.body.imageLink,
             Rating:req.body.rating,
             location:req.body.location,
-            veg:req.body.veg,
-            nonVeg:req.body.nonVeg
+            Dish:req.body.dish,
+            DishName:req.body.dishname,
+            Price:req.body.price
         })
         res.status(201).json({'status':'Restaurent Added !..'})
     }catch(err){

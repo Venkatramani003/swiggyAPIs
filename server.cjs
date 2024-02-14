@@ -8,6 +8,7 @@ app.use(cors())
 const {UserDB} = require('./UserSchema.cjs')
 const {ResDB} = require('./ResSchema.cjs')
 const {CartDB} = require('./CartSchema.cjs')
+
 const port =process.env.PORT||8000           //=>for Generic host || for local host
 async function connectToDb(){
     try{
@@ -91,3 +92,17 @@ app.post('/addTocart',async (req,res)=>{
         res.json({'status':'Failed to add'})
     }
 })
+
+//to delete the restaurant details
+app.delete('/delRes/:id' , async (req , res) =>{ 
+  try{
+    const data = await ResDB.findByIdAndDelete(req.params.id);  
+    if(!data) return res.json('No Data');  
+    else return res.json({
+        'status':'Deleted successfully!..'
+    })
+  } catch(err){
+    res.json({'status':'Failed to Delete',
+            'error':err})
+  } 
+});  

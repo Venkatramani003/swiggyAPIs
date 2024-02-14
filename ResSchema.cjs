@@ -11,12 +11,16 @@ const ResSchema = new mongoose.Schema({
         type:String,
         require : true
     },
+    Price : {
+        type:String,
+        require:true
+    },
     veg :{
         type:Array
 
     },
     nonVeg : {
-        type:Array
+        type:String
     },
     imgLink : {
         type : String
